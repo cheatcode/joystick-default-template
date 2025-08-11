@@ -1,0 +1,1 @@
+.mod-tooltip{position:absolute;padding:5px 12px 6px;border-radius:30px;font-size:13px;font-weight:600;pointer-events:none;transition:opacity .2s;opacity:0;z-index:70;max-width:200px;text-align:center;white-space:nowrap;background:#000;color:var(--mod-neutral-1)}

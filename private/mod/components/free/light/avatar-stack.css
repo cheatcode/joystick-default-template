@@ -1,0 +1,1 @@
+.mod-avatar-stack{display:flex}.mod-avatar-stack>.mod-avatar-circle:not(:first-child),.mod-avatar-stack>.mod-avatar-square:not(:first-child),.mod-avatar-stack>.mod-avatar:not(:first-child){margin-left:-10px}.mod-avatar-stack>.mod-avatar,.mod-avatar-stack>.mod-avatar-circle,.mod-avatar-stack>.mod-avatar-square{border:2px solid var(--mod-background)}

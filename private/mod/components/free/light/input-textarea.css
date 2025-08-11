@@ -1,0 +1,1 @@
+textarea.mod-input{min-height:100px;line-height:22px}textarea.mod-input.mod-autoresize{resize:none;max-height:none!important;transition:height .3s ease}textarea.mod-input.mod-input-small{min-height:75px}textarea.mod-input.mod-input-large{min-height:150px}
