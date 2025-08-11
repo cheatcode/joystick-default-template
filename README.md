@@ -1,4 +1,4 @@
-<img style="height: 27px; width: auto;" src="https://cdn.joystickjs.com/branding/joystick_logo_light.svg" alt="Joystick">
+<img style="height: 30px; width: auto;" src="https://cdn.joystickjs.com/branding/joystick_logo_light.svg" alt="Joystick">
 
 ## Default Template
 
