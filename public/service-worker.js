@@ -2,8 +2,6 @@ const cache_name = "app-cache-v4";
 const static_cache_name = "static-cache-v4";
 
 const static_assets = [
-  "/",
-  "/index.html",
   "/index.css",
   "/index.client.js",
   "/favicon.png",
@@ -26,7 +24,7 @@ const cookie_vary_paths = new Set([
   "/joystick_logo_dark.svg"
 ]);
 
-const get_ext = (path) => {
+const get_extension = (path) => {
   const i = path.lastIndexOf(".");
   return i === -1 ? "" : path.slice(i).toLowerCase();
 };
@@ -34,7 +32,9 @@ const get_ext = (path) => {
 const is_static_asset = (url) => {
   const { pathname } = new URL(url, self.location.origin);
   if (static_assets.includes(pathname)) return true;
-  return static_exts.has(get_ext(pathname));
+  const extension = get_extension(pathname);
+  if (extension === ".html" || extension === ".htm") return false;
+  return static_exts.has(extension);
 };
 
 const is_cache_busted = (url) => {
@@ -75,7 +75,8 @@ self.addEventListener("fetch", (event) => {
   if (url.pathname.startsWith("/api/")) return;
 
   const is_navigation = request.mode === "navigate" || request.destination === "document";
-  const needs_fresh = is_navigation || cookie_vary_paths.has(url.pathname) || is_cache_busted(url);
+  const is_html_request = get_extension(url.pathname) === ".html" || get_extension(url.pathname) === ".htm" || is_navigation;
+  const needs_fresh = is_navigation || cookie_vary_paths.has(url.pathname) || is_cache_busted(url) || is_html_request;
 
   if (needs_fresh) {
     event.respondWith(
@@ -83,7 +84,10 @@ self.addEventListener("fetch", (event) => {
         try {
           return await fetch(request, { cache: "no-store" });
         } catch {
-          const cached = await caches.match(is_navigation ? "/" : request);
+          if (is_html_request) {
+            return new Response("Offline", { status: 503, statusText: "Service Unavailable" });
+          }
+          const cached = await caches.match(request);
           return cached || new Response("Offline", { status: 503, statusText: "Service Unavailable" });
         }
       })()

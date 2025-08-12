@@ -21,6 +21,10 @@ const en_US = {
         title_off: 'Toggle Dark Mode Off',
         subtitle_on: 'Toggle dark mode on in this app.',
         subtitle_off: 'Toggle dark mode off in this app.'
+      },
+      language: {
+        title: 'Language',
+        subtitle: 'Set your personal language preference.'
       }
     },
     websockets: {

@@ -1,8 +1,12 @@
 import joystick from "@joystick.js/ui-canary";
 import Button from "../../components/button/index.js";
 import format_iso_to_human_readable from "../../../lib/format_iso_to_human_readable.js";
+import supported_languages from "../../../lib/supported_languages.js";
 
 const Index = joystick.component({
+  test: {
+    name: 'index_page',
+  },
   data: async (api = {}) => {
     return {
       index: await api.get('index'),
@@ -64,7 +68,10 @@ const Index = joystick.component({
 
           .index-page > .directory > footer {
             display: flex;
+            flex-direction: column;
+            gap: 10px;
             align-items: center;
+            justify-content: center;
             margin-top: 20px;
           }
 
@@ -76,7 +83,6 @@ const Index = joystick.component({
             display: flex;
             align-items: center;
             gap: 10px;
-            margin-left: auto;
           }
 
           .index-page > .directory > footer ul li a {
@@ -86,6 +92,15 @@ const Index = joystick.component({
 
           .index-page > .directory > footer ul li a:hover {
             color: var(--mod-brand);
+          }
+  
+          .index-page > .directory > footer ul li.language {
+            font-size: 22px;
+            cursor: pointer;
+          }
+
+          .index-page > .directory > footer ul li.language:nth-child(2) {
+            margin-right: 10px;
           }
         `,
         740: `
@@ -109,8 +124,14 @@ const Index = joystick.component({
       instance.cookies.set('theme', instance?.props?.theme === 'light' ? 'dark' : 'light');
       location.replace(location.href);
     },
+    'change [name="language"]': (event = {}, instance = {}) => {
+      event.preventDefault();
+      const language = event.target.value;
+      instance.cookies.set('language', language);
+      location.replace(location.href);
+    },
   },
-  render: ({ props, html, data, component, state, i18n }) => {
+  render: ({ props, html, data, component, state, i18n, user, language, each }) => {
     return html`
       <div class="index-page">
         <div class="directory">
@@ -162,6 +183,22 @@ const Index = joystick.component({
                   classes: 'mod-button-icon-prefixed',
                   label: i18n('panels.community.button'),
                 })}
+              </div>
+            </div>
+            <div class="mod-panel">
+              <div class="mod-panel-center">
+                <p class="mod-panel-title">${i18n('panels.language.title')}</p>
+                <p class="mod-panel-subtitle">${i18n('panels.language.subtitle')}</p>
+              </div>
+              <div class="mod-panel-right">
+                <div class="mod-select-input">
+                  <select class="mod-input" name="language" value="${language}">
+                    ${each(supported_languages, (supported_language) => {
+                      return `<option ${language === supported_language.code ? 'selected="true"' : ''} value="${supported_language.code}">${supported_language.name}</option>`;
+                    })}
+                  </select>
+                  <i class="mod-icon-chevron-down"></i>
+                </div>
               </div>
             </div>
             <div class="mod-panel">

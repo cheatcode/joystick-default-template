@@ -21,6 +21,10 @@ const es_ES = {
         title_off: 'Desactivar Modo Oscuro',
         subtitle_on: 'Activar el modo oscuro en esta aplicación.',
         subtitle_off: 'Desactivar el modo oscuro en esta aplicación.'
+      },
+      language: {
+        title: 'Idioma',
+        subtitle: 'Establece tu preferencia de idioma personal.'
       }
     },
     websockets: {
