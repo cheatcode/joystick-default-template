@@ -32,7 +32,7 @@ const pt_BR = {
       disconnected: 'WebSockets estão desconectados'
     },
     footer: {
-      copyright: '© {{year}} CheatCode Software LLC'
+      copyright: '© {{year}} <a href="https://cheatcode.co">CheatCode</a>. Construa as coisas que você gostaria que existissem ✌️'
     }
   },
   'ui/pages/not_found/index.js': {

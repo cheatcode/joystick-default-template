@@ -19,11 +19,11 @@ const wait_for_function_calls = async (path, expected_count = 1, max_attempts = 
 test.that('clock websocket connection sends timestamp on open', async (assert = {}) => {
   const connection = await test.websockets.connect('clock');
 
-  await wait(200);
+  await wait(100);
 
   connection.close();
 
-  await wait(200);
+  await wait(100);
 
   const function_calls = await wait_for_function_calls('node.websockets.clock.on_open');
   assert.is(function_calls.length > 0, true);
@@ -32,17 +32,17 @@ test.that('clock websocket connection sends timestamp on open', async (assert = 
 test.that('clock websocket sends and receives messages', async (assert = {}) => {
   const connection = await test.websockets.connect('clock');
 
-  await wait(200);
+  await wait(100);
 
   connection.send({
     test: 'message from client'
   });
 
-  await wait(200);
+  await wait(100);
 
   connection.close();
 
-  await wait(200);
+  await wait(100);
 
   const function_calls = await wait_for_function_calls('node.websockets.clock.on_message');
 
@@ -58,11 +58,11 @@ test.that('clock websocket sends and receives messages', async (assert = {}) => 
 test.that('clock websocket handles connection close', async (assert = {}) => {
   const connection = await test.websockets.connect('clock');
 
-  await wait(200);
+  await wait(100);
 
   connection.close();
 
-  await wait(300);
+  await wait(100);
 
   const function_calls = await wait_for_function_calls('node.websockets.clock.on_close');
   assert.is(function_calls.length > 0, true);

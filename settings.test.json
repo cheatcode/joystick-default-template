@@ -5,6 +5,14 @@
         "provider": "mongodb",
         "users": true,
         "options": {}
+      },
+      {
+        "provider": "postgresql",
+        "options": {}
+      },
+      {
+        "provider": "redis",
+        "options": {}
       }
     ],
     "i18n": {

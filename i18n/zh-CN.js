@@ -32,7 +32,7 @@ const zh_CN = {
       disconnected: 'WebSockets已断开连接'
     },
     footer: {
-      copyright: '© {{year}} CheatCode Software LLC'
+      copyright: '© {{year}} <a href="https://cheatcode.co">CheatCode</a>. 构建你希望存在的东西 ✌️'
     }
   },
   'ui/pages/not_found/index.js': {

@@ -32,7 +32,7 @@ const ru_RU = {
       disconnected: 'WebSockets отключены'
     },
     footer: {
-      copyright: '© {{year}} CheatCode Software LLC'
+      copyright: '© {{year}} <a href="https://cheatcode.co">CheatCode</a>. Создавайте то, что хотели бы видеть ✌️'
     }
   },
   'ui/pages/not_found/index.js': {

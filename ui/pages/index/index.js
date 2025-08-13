@@ -122,13 +122,13 @@ const Index = joystick.component({
     'change [name="theme"]': (event = {}, instance = {}) => {
       event.preventDefault();
       instance.cookies.set('theme', instance?.props?.theme === 'light' ? 'dark' : 'light');
-      location.replace(location.href);
+      location.href = location.href.split('?')[0] + '?t=' + Date.now();
     },
     'change [name="language"]': (event = {}, instance = {}) => {
       event.preventDefault();
       const language = event.target.value;
       instance.cookies.set('language', language);
-      location.replace(location.href);
+      location.href = location.href.split('?')[0] + '?t=' + Date.now();
     },
   },
   render: ({ props, html, data, component, state, i18n, user, language, each }) => {

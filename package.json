@@ -12,8 +12,8 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@joystick.js/node-canary": "^0.0.0-canary.2124",
-    "@joystick.js/test-canary": "^0.0.0-canary.2124",
-    "@joystick.js/ui-canary": "^0.0.0-canary.2124"
+    "@joystick.js/node-canary": "^0.0.0-canary.2182",
+    "@joystick.js/test-canary": "^0.0.0-canary.2182",
+    "@joystick.js/ui-canary": "^0.0.0-canary.2182"
   }
 }

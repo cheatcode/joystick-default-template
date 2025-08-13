@@ -32,7 +32,7 @@ const ja_JP = {
       disconnected: 'WebSocketsが切断されています'
     },
     footer: {
-      copyright: '© {{year}} CheatCode Software LLC'
+      copyright: '© {{year}} <a href="https://cheatcode.co">CheatCode</a>. あなたが存在してほしいと思うものを作ろう ✌️'
     }
   },
   'ui/pages/not_found/index.js': {

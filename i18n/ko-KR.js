@@ -32,7 +32,7 @@ const ko_KR = {
       disconnected: 'WebSockets이 연결 해제되었습니다'
     },
     footer: {
-      copyright: '© {{year}} CheatCode Software LLC'
+      copyright: '© {{year}} <a href="https://cheatcode.co">CheatCode</a>. 당신이 존재하길 바라는 것들을 만들어보세요 ✌️'
     }
   },
   'ui/pages/not_found/index.js': {

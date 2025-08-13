@@ -32,7 +32,7 @@ const th_TH = {
       disconnected: 'WebSockets ไม่ได้เชื่อมต่อ'
     },
     footer: {
-      copyright: '© {{year}} CheatCode Software LLC'
+      copyright: '© {{year}} <a href="https://cheatcode.co">CheatCode</a>. สร้างสิ่งที่คุณอยากให้มีอยู่ ✌️'
     }
   },
   'ui/pages/not_found/index.js': {

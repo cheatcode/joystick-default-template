@@ -32,7 +32,7 @@ const sw_KE = {
       disconnected: 'WebSockets hazijaungana'
     },
     footer: {
-      copyright: '© {{year}} CheatCode Software LLC'
+      copyright: '© {{year}} <a href="https://cheatcode.co">CheatCode</a>. Jenga vitu unavyotamani viwepo ✌️'
     }
   },
   'ui/pages/not_found/index.js': {
