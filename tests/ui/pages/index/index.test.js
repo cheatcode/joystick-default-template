@@ -1,4 +1,4 @@
-import test from '@joystick.js/test-canary';
+import test from '@joystick.js/test';
 
 test.that('Index page renders with correct structure and data', async (assert = {}) => {
   const component = await test.render('ui/pages/index/index.js', {

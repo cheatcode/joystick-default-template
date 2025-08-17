@@ -1,4 +1,4 @@
-import test from '@joystick.js/test-canary';
+import test from '@joystick.js/test';
 
 test.that('format_iso_to_human_readable formats ISO date strings correctly', async (assert = {}) => {
   const format_iso_to_human_readable = await test.load('lib/format_iso_to_human_readable.js', { default: true });

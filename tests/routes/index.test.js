@@ -1,4 +1,4 @@
-import test from '@joystick.js/test-canary';
+import test from '@joystick.js/test';
 
 test.that('index route renders correctly', async (assert = {}) => {
   const response = await test.routes.get('/');

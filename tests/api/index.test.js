@@ -1,4 +1,4 @@
-import test from '@joystick.js/test-canary';
+import test from '@joystick.js/test';
 
 test.that('index getter returns version and stars data', async (assert = {}) => {
   const data = await test.api.get('index');

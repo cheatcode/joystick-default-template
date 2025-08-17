@@ -1,4 +1,4 @@
-import test from '@joystick.js/test-canary';
+import test from '@joystick.js/test';
 
 // NOTE: Helper function to wait for a specified time
 const wait = (ms) => new Promise(resolve => setTimeout(resolve, ms));

@@ -1,4 +1,4 @@
-import joystick from "@joystick.js/ui-canary";
+import joystick from "@joystick.js/ui";
 
 const App = joystick.component({
   render: ({ props, component }) => {

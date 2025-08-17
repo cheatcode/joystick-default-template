@@ -1,4 +1,4 @@
-import test from '@joystick.js/test-canary';
+import test from '@joystick.js/test';
 
 test.that('Button component renders as a link when href is provided', async (assert = {}) => {
   const component = await test.render('ui/components/button/index.js', {

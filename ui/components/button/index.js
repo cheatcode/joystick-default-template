@@ -1,4 +1,4 @@
-import joystick from "@joystick.js/ui-canary";
+import joystick from "@joystick.js/ui";
 
 const Button = joystick.component({
   render: ({ props, when }) => {

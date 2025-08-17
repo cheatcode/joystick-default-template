@@ -1,4 +1,4 @@
-import ui from '@joystick.js/ui-canary';
+import ui from '@joystick.js/ui';
 
 const ResetPassword = ui.component({
   render: ({ props }) => {

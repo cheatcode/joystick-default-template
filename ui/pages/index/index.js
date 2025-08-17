@@ -1,4 +1,4 @@
-import joystick from "@joystick.js/ui-canary";
+import joystick from "@joystick.js/ui";
 import Button from "../../components/button/index.js";
 import format_iso_to_human_readable from "../../../lib/format_iso_to_human_readable.js";
 import supported_languages from "../../../lib/supported_languages.js";

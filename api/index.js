@@ -4,7 +4,7 @@ const api = {
   getters: {
     index: {
       get: async (_input = {}, context = {}) => {
-        const package_json = JSON.parse(await fs.readFile('node_modules/@joystick.js/ui-canary/package.json', 'utf-8'));
+        const package_json = JSON.parse(await fs.readFile('node_modules/@joystick.js/ui/package.json', 'utf-8'));
 
         let stars = 0;
         
